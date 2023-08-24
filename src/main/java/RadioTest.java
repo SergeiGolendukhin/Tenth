@@ -4,6 +4,74 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
+    public void testCount0() {
+        Radio radio = new Radio(50);
+
+        radio.setCurrentStation(15);
+
+        int actual = radio.getCurrentStation();
+        int expected = 15;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCount1() {
+        Radio radio = new Radio(50);
+
+        radio.setCurrentStation(51);
+
+        int actual = radio.getCurrentStation();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCount2() {
+        Radio radio = new Radio(50);
+
+        radio.setCurrentStation(50);
+
+        int actual = radio.getCurrentStation();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCount3() {
+        Radio radio = new Radio(50);
+
+        radio.setCurrentStation(49);
+
+        int actual = radio.getCurrentStation();
+        int expected = 49;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCount4() {
+        Radio radio = new Radio(50);
+
+        radio.setCurrentStation(1);
+
+        int actual = radio.getCurrentStation();
+        int expected = 1;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCount5() {
+        Radio radio = new Radio(50);
+
+        radio.setCurrentStation(-1);
+
+        int actual = radio.getCurrentStation();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+
+    @Test
     public void test0() {
         Radio radio = new Radio();
 
@@ -16,7 +84,7 @@ public class RadioTest {
 
     @Test
     public void test1() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(0);
 
@@ -26,7 +94,7 @@ public class RadioTest {
     }
     @Test
     public void test2() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(1);
 
@@ -37,7 +105,7 @@ public class RadioTest {
 
     @Test
     public void test3() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(-1);
 
@@ -48,7 +116,7 @@ public class RadioTest {
 
     @Test
     public void test4() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(9);
 
@@ -59,7 +127,7 @@ public class RadioTest {
 
     @Test
     public void test5() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(11);
 
@@ -70,7 +138,7 @@ public class RadioTest {
 
     @Test
     public void test6() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(8);
 
@@ -80,7 +148,7 @@ public class RadioTest {
     }
     @Test
     public void test7() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
 
         radio.setCurrentStation(10);
 
