@@ -418,6 +418,19 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testReduce7() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(102);
+
+        radio.reduceVolume();
+
+        int actual = radio.getCurrentVolume();
+        int expected = 0;
+        Assertions.assertEquals(expected, actual);
+    }
+
 
 
 }
